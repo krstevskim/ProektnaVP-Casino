@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SlotMachineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlotMachineForm.Designer.cs">
+      <DependentUpon>SlotMachineForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HiLowForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="UplataPariForm.Designer.cs">
       <DependentUpon>UplataPariForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SlotMachineForm.resx">
+      <DependentUpon>SlotMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HiLowForm.resx">
       <DependentUpon>HiLowForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +153,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Music\Galoski_remix.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

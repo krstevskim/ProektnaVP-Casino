@@ -96,5 +96,25 @@ namespace ProektnaVPCasino
             mform.Show();
             
         }
+
+        private void slotMachineBtn_Click(object sender, EventArgs e)
+        {
+            if (proverkaPari())
+            {
+                vkupnoPari = vkupnoPari - int.Parse(pariZaSlednaIgra.Text);
+                SlotMachineForm slotMachineForm= new SlotMachineForm(this, int.Parse(pariZaSlednaIgra.Text));
+                slotMachineForm.StartPosition = FormStartPosition.Manual;
+                slotMachineForm.Location = new Point(this.Location.X, this.Location.Y);
+                this.Visible = false;
+                if (mform != null)
+                    mform.Hide();
+
+                slotMachineForm.ShowDialog();
+                vkupnoPari = vkupnoPari + slotMachineForm.pariInt;
+                update();
+                this.Location = slotMachineForm.Location;
+                this.Visible = true;
+            }
+        }
     }
 }

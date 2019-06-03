@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.uplatiPari = new System.Windows.Forms.Button();
             this.musicFormBtn = new System.Windows.Forms.Button();
+            this.slotMachineBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -113,11 +114,22 @@
             this.musicFormBtn.UseVisualStyleBackColor = true;
             this.musicFormBtn.Click += new System.EventHandler(this.musicFormBtn_Click);
             // 
+            // slotMachineBtn
+            // 
+            this.slotMachineBtn.Location = new System.Drawing.Point(210, 149);
+            this.slotMachineBtn.Name = "slotMachineBtn";
+            this.slotMachineBtn.Size = new System.Drawing.Size(118, 84);
+            this.slotMachineBtn.TabIndex = 10;
+            this.slotMachineBtn.Text = "Start Slot Machine";
+            this.slotMachineBtn.UseVisualStyleBackColor = true;
+            this.slotMachineBtn.Click += new System.EventHandler(this.slotMachineBtn_Click);
+            // 
             // GlavnaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.slotMachineBtn);
             this.Controls.Add(this.musicFormBtn);
             this.Controls.Add(this.uplatiPari);
             this.Controls.Add(this.label3);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button uplatiPari;
         private System.Windows.Forms.Button musicFormBtn;
+        private System.Windows.Forms.Button slotMachineBtn;
     }
 }
