@@ -55,7 +55,7 @@
             this.btnHi.Name = "btnHi";
             this.btnHi.Size = new System.Drawing.Size(75, 23);
             this.btnHi.TabIndex = 1;
-            this.btnHi.Text = "Hi";
+            this.btnHi.Text = "Високо";
             this.btnHi.UseVisualStyleBackColor = true;
             this.btnHi.Click += new System.EventHandler(this.btnHi_Click);
             // 
@@ -65,7 +65,7 @@
             this.btnLow.Name = "btnLow";
             this.btnLow.Size = new System.Drawing.Size(75, 23);
             this.btnLow.TabIndex = 2;
-            this.btnLow.Text = "Low";
+            this.btnLow.Text = "Ниско";
             this.btnLow.UseVisualStyleBackColor = true;
             this.btnLow.Click += new System.EventHandler(this.btnLow_Click);
             // 
@@ -118,7 +118,7 @@
             this.cashOutbtn.Name = "cashOutbtn";
             this.cashOutbtn.Size = new System.Drawing.Size(75, 23);
             this.cashOutbtn.TabIndex = 10;
-            this.cashOutbtn.Text = "Cash OUT";
+            this.cashOutbtn.Text = "Искеширај";
             this.cashOutbtn.UseVisualStyleBackColor = true;
             this.cashOutbtn.Click += new System.EventHandler(this.cashOutbtn_Click);
             // 
@@ -138,11 +138,12 @@
             // 
             // endGamebtn
             // 
+            this.endGamebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.endGamebtn.Location = new System.Drawing.Point(12, 267);
             this.endGamebtn.Name = "endGamebtn";
             this.endGamebtn.Size = new System.Drawing.Size(100, 100);
             this.endGamebtn.TabIndex = 12;
-            this.endGamebtn.Text = "END GAME";
+            this.endGamebtn.Text = "Заврши Игра";
             this.endGamebtn.UseVisualStyleBackColor = true;
             this.endGamebtn.Click += new System.EventHandler(this.endGamebtn_Click);
             // 
@@ -150,11 +151,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(221, 390);
+            this.label1.Location = new System.Drawing.Point(212, 387);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
+            this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Bet ";
+            this.label1.Text = "Облог";
             // 
             // label2
             // 
@@ -162,17 +163,18 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(129, 387);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 20);
+            this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Money";
+            this.label2.Text = "Пари";
             // 
             // musicBtn
             // 
+            this.musicBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.musicBtn.Location = new System.Drawing.Point(656, 267);
             this.musicBtn.Name = "musicBtn";
             this.musicBtn.Size = new System.Drawing.Size(100, 100);
             this.musicBtn.TabIndex = 15;
-            this.musicBtn.Text = "Music";
+            this.musicBtn.Text = "Музика";
             this.musicBtn.UseVisualStyleBackColor = true;
             this.musicBtn.Click += new System.EventHandler(this.musicBtn_Click);
             // 

@@ -87,6 +87,16 @@
             this.totalMoney = new System.Windows.Forms.TextBox();
             this.label0 = new System.Windows.Forms.Label();
             this.resetBtn = new System.Windows.Forms.Button();
+            this.label44 = new System.Windows.Forms.Label();
+            this.uplateniBroevi = new System.Windows.Forms.Label();
+            this.uplateniBroeviTip = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.vkVlogTxt = new System.Windows.Forms.TextBox();
+            this.dobivkaTxt = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.musicBtn = new System.Windows.Forms.Button();
+            this.endGameBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.betTip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evenNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oddNUD)).BeginInit();
@@ -121,7 +131,7 @@
             this.num2.Name = "num2";
             this.num2.Size = new System.Drawing.Size(105, 75);
             this.num2.TabIndex = 1;
-            this.num2.Text = "1";
+            this.num2.Text = "24";
             this.num2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // num3
@@ -135,7 +145,7 @@
             this.num3.Name = "num3";
             this.num3.Size = new System.Drawing.Size(105, 75);
             this.num3.TabIndex = 2;
-            this.num3.Text = "1";
+            this.num3.Text = "17";
             this.num3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // num4
@@ -163,16 +173,17 @@
             this.num5.Name = "num5";
             this.num5.Size = new System.Drawing.Size(105, 75);
             this.num5.TabIndex = 4;
-            this.num5.Text = "1";
+            this.num5.Text = "5";
             this.num5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // beginBtn
             // 
-            this.beginBtn.Location = new System.Drawing.Point(328, 227);
+            this.beginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beginBtn.Location = new System.Drawing.Point(328, 203);
             this.beginBtn.Name = "beginBtn";
             this.beginBtn.Size = new System.Drawing.Size(146, 69);
             this.beginBtn.TabIndex = 5;
-            this.beginBtn.Text = "Start";
+            this.beginBtn.Text = "Започни Игра";
             this.beginBtn.UseVisualStyleBackColor = true;
             this.beginBtn.Click += new System.EventHandler(this.beginBtn_Click);
             // 
@@ -308,13 +319,14 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Red;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Location = new System.Drawing.Point(780, 261);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.MinimumSize = new System.Drawing.Size(36, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 25);
+            this.label7.Size = new System.Drawing.Size(36, 27);
             this.label7.TabIndex = 21;
             this.label7.Text = "7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -760,7 +772,7 @@
             0,
             0,
             0});
-            this.betTip.Location = new System.Drawing.Point(669, 293);
+            this.betTip.Location = new System.Drawing.Point(669, 314);
             this.betTip.Name = "betTip";
             this.betTip.Size = new System.Drawing.Size(53, 29);
             this.betTip.TabIndex = 51;
@@ -773,10 +785,11 @@
             0,
             0,
             0});
-            this.evenNUD.Location = new System.Drawing.Point(562, 393);
+            this.evenNUD.Location = new System.Drawing.Point(562, 379);
             this.evenNUD.Name = "evenNUD";
             this.evenNUD.Size = new System.Drawing.Size(53, 29);
             this.evenNUD.TabIndex = 52;
+            this.evenNUD.ValueChanged += new System.EventHandler(this.evenNUD_ValueChanged);
             // 
             // oddNUD
             // 
@@ -786,10 +799,11 @@
             0,
             0,
             0});
-            this.oddNUD.Location = new System.Drawing.Point(669, 393);
+            this.oddNUD.Location = new System.Drawing.Point(669, 379);
             this.oddNUD.Name = "oddNUD";
             this.oddNUD.Size = new System.Drawing.Size(53, 29);
             this.oddNUD.TabIndex = 53;
+            this.oddNUD.ValueChanged += new System.EventHandler(this.oddNUD_ValueChanged);
             // 
             // blackNUD
             // 
@@ -799,10 +813,11 @@
             0,
             0,
             0});
-            this.blackNUD.Location = new System.Drawing.Point(562, 449);
+            this.blackNUD.Location = new System.Drawing.Point(562, 435);
             this.blackNUD.Name = "blackNUD";
             this.blackNUD.Size = new System.Drawing.Size(53, 29);
             this.blackNUD.TabIndex = 54;
+            this.blackNUD.ValueChanged += new System.EventHandler(this.blackNUD_ValueChanged);
             // 
             // redNUD
             // 
@@ -812,10 +827,11 @@
             0,
             0,
             0});
-            this.redNUD.Location = new System.Drawing.Point(669, 449);
+            this.redNUD.Location = new System.Drawing.Point(669, 435);
             this.redNUD.Name = "redNUD";
             this.redNUD.Size = new System.Drawing.Size(53, 29);
             this.redNUD.TabIndex = 55;
+            this.redNUD.ValueChanged += new System.EventHandler(this.redNUD_ValueChanged);
             // 
             // lowNUD
             // 
@@ -825,10 +841,11 @@
             0,
             0,
             0});
-            this.lowNUD.Location = new System.Drawing.Point(562, 506);
+            this.lowNUD.Location = new System.Drawing.Point(562, 492);
             this.lowNUD.Name = "lowNUD";
             this.lowNUD.Size = new System.Drawing.Size(53, 29);
             this.lowNUD.TabIndex = 56;
+            this.lowNUD.ValueChanged += new System.EventHandler(this.lowNUD_ValueChanged);
             // 
             // highNUD
             // 
@@ -838,88 +855,89 @@
             0,
             0,
             0});
-            this.highNUD.Location = new System.Drawing.Point(669, 506);
+            this.highNUD.Location = new System.Drawing.Point(669, 492);
             this.highNUD.Name = "highNUD";
             this.highNUD.Size = new System.Drawing.Size(53, 29);
             this.highNUD.TabIndex = 57;
+            this.highNUD.ValueChanged += new System.EventHandler(this.highNUD_ValueChanged);
             // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(567, 374);
+            this.label37.Location = new System.Drawing.Point(564, 362);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(39, 16);
+            this.label37.Size = new System.Drawing.Size(50, 16);
             this.label37.TabIndex = 58;
-            this.label37.Text = "Even";
+            this.label37.Text = "Парни";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(676, 374);
+            this.label38.Location = new System.Drawing.Point(666, 363);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(34, 16);
+            this.label38.Size = new System.Drawing.Size(66, 16);
             this.label38.TabIndex = 59;
-            this.label38.Text = "Odd";
+            this.label38.Text = "Непарни";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(676, 433);
+            this.label39.Location = new System.Drawing.Point(669, 421);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(34, 16);
+            this.label39.Size = new System.Drawing.Size(57, 16);
             this.label39.TabIndex = 61;
-            this.label39.Text = "Red";
+            this.label39.Text = "Црвено";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(567, 433);
+            this.label40.Location = new System.Drawing.Point(567, 419);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(42, 16);
+            this.label40.Size = new System.Drawing.Size(41, 16);
             this.label40.TabIndex = 60;
-            this.label40.Text = "Black";
+            this.label40.Text = "Црно";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(676, 487);
+            this.label41.Location = new System.Drawing.Point(669, 474);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(36, 16);
+            this.label41.Size = new System.Drawing.Size(55, 16);
             this.label41.TabIndex = 63;
-            this.label41.Text = "High";
+            this.label41.Text = "Високо";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(567, 487);
+            this.label42.Location = new System.Drawing.Point(567, 473);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(32, 16);
+            this.label42.Size = new System.Drawing.Size(48, 16);
             this.label42.TabIndex = 62;
-            this.label42.Text = "Low";
+            this.label42.Text = "Ниско";
             // 
             // label43
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(676, 274);
+            this.label43.Location = new System.Drawing.Point(671, 295);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(28, 16);
+            this.label43.Size = new System.Drawing.Size(48, 16);
             this.label43.TabIndex = 64;
-            this.label43.Text = "Bet";
+            this.label43.Text = "Облог";
             // 
             // totalMoney
             // 
             this.totalMoney.Enabled = false;
             this.totalMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMoney.Location = new System.Drawing.Point(22, 391);
+            this.totalMoney.Location = new System.Drawing.Point(53, 570);
             this.totalMoney.Name = "totalMoney";
-            this.totalMoney.Size = new System.Drawing.Size(106, 31);
+            this.totalMoney.Size = new System.Drawing.Size(119, 31);
             this.totalMoney.TabIndex = 65;
             this.totalMoney.Text = "11111";
             // 
@@ -941,19 +959,132 @@
             // 
             // resetBtn
             // 
+            this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetBtn.Location = new System.Drawing.Point(328, 421);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.Size = new System.Drawing.Size(146, 69);
             this.resetBtn.TabIndex = 67;
-            this.resetBtn.Text = "Reset";
+            this.resetBtn.Text = "Ресетирај";
             this.resetBtn.UseVisualStyleBackColor = true;
             this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(328, 501);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(143, 20);
+            this.label44.TabIndex = 68;
+            this.label44.Text = "Уплатени Броеви";
+            // 
+            // uplateniBroevi
+            // 
+            this.uplateniBroevi.AutoSize = true;
+            this.uplateniBroevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uplateniBroevi.Location = new System.Drawing.Point(321, 530);
+            this.uplateniBroevi.Name = "uplateniBroevi";
+            this.uplateniBroevi.Size = new System.Drawing.Size(218, 37);
+            this.uplateniBroevi.TabIndex = 69;
+            this.uplateniBroevi.Text = "uplateniBroevi";
+            // 
+            // uplateniBroeviTip
+            // 
+            this.uplateniBroeviTip.AutoSize = true;
+            this.uplateniBroeviTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uplateniBroeviTip.Location = new System.Drawing.Point(321, 577);
+            this.uplateniBroeviTip.Name = "uplateniBroeviTip";
+            this.uplateniBroeviTip.Size = new System.Drawing.Size(263, 37);
+            this.uplateniBroeviTip.TabIndex = 70;
+            this.uplateniBroeviTip.Text = "uplateniBroeviTip";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(594, 200);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(120, 24);
+            this.label45.TabIndex = 71;
+            this.label45.Text = "Вкупен Влог";
+            // 
+            // vkVlogTxt
+            // 
+            this.vkVlogTxt.Enabled = false;
+            this.vkVlogTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vkVlogTxt.Location = new System.Drawing.Point(598, 227);
+            this.vkVlogTxt.Name = "vkVlogTxt";
+            this.vkVlogTxt.Size = new System.Drawing.Size(106, 31);
+            this.vkVlogTxt.TabIndex = 72;
+            this.vkVlogTxt.Text = "0";
+            // 
+            // dobivkaTxt
+            // 
+            this.dobivkaTxt.Enabled = false;
+            this.dobivkaTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobivkaTxt.Location = new System.Drawing.Point(99, 230);
+            this.dobivkaTxt.Name = "dobivkaTxt";
+            this.dobivkaTxt.Size = new System.Drawing.Size(106, 31);
+            this.dobivkaTxt.TabIndex = 74;
+            this.dobivkaTxt.Text = "0";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(110, 203);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(87, 24);
+            this.label46.TabIndex = 73;
+            this.label46.Text = "Добивка";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(49, 543);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(123, 24);
+            this.label47.TabIndex = 75;
+            this.label47.Text = "Вкупно Пари";
+            // 
+            // musicBtn
+            // 
+            this.musicBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.musicBtn.Location = new System.Drawing.Point(53, 298);
+            this.musicBtn.Name = "musicBtn";
+            this.musicBtn.Size = new System.Drawing.Size(90, 90);
+            this.musicBtn.TabIndex = 76;
+            this.musicBtn.Text = "Музика";
+            this.musicBtn.UseVisualStyleBackColor = true;
+            this.musicBtn.Click += new System.EventHandler(this.musicBtn_Click);
+            // 
+            // endGameBtn
+            // 
+            this.endGameBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endGameBtn.Location = new System.Drawing.Point(53, 410);
+            this.endGameBtn.Name = "endGameBtn";
+            this.endGameBtn.Size = new System.Drawing.Size(90, 90);
+            this.endGameBtn.TabIndex = 77;
+            this.endGameBtn.Text = "Заврши Игра";
+            this.endGameBtn.UseVisualStyleBackColor = true;
+            this.endGameBtn.Click += new System.EventHandler(this.endGameBtn_Click);
             // 
             // RoulleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 623);
+            this.ClientSize = new System.Drawing.Size(934, 623);
+            this.Controls.Add(this.endGameBtn);
+            this.Controls.Add(this.musicBtn);
+            this.Controls.Add(this.label47);
+            this.Controls.Add(this.dobivkaTxt);
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.vkVlogTxt);
+            this.Controls.Add(this.label45);
+            this.Controls.Add(this.uplateniBroeviTip);
+            this.Controls.Add(this.uplateniBroevi);
+            this.Controls.Add(this.label44);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.label0);
             this.Controls.Add(this.totalMoney);
@@ -1014,7 +1145,8 @@
             this.Controls.Add(this.num2);
             this.Controls.Add(this.num1);
             this.Name = "RoulleteForm";
-            this.Text = "RoulleteForm";
+            this.Text = "Рулет";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RoulleteForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.betTip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evenNUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oddNUD)).EndInit();
@@ -1088,5 +1220,15 @@
         private System.Windows.Forms.TextBox totalMoney;
         private System.Windows.Forms.Label label0;
         private System.Windows.Forms.Button resetBtn;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label uplateniBroevi;
+        private System.Windows.Forms.Label uplateniBroeviTip;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox vkVlogTxt;
+        private System.Windows.Forms.TextBox dobivkaTxt;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button musicBtn;
+        private System.Windows.Forms.Button endGameBtn;
     }
 }

@@ -54,7 +54,7 @@ namespace ProektnaVPCasino
             BackColor = Color.White;
             this.parent = parent;
             pariInt = startCash;
-            betTip.Maximum = pariInt;
+            betTip.Maximum = 100;
             timer1.Start();
             update();
             DoubleBuffered = true;
@@ -168,7 +168,7 @@ namespace ProektnaVPCasino
             pogodeni.Text = "0";
             betTip.Enabled = true;
             first = true;
-            betTip.Maximum = pariInt;
+            betTip.Maximum = 100;
             cashOutAmount.Text = "0";
             betTip.Enabled = true;
             if (betTip.Minimum > pariInt)

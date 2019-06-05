@@ -53,7 +53,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(455, 273);
             this.Name = "MusicForm";
-            this.Text = "MusicForm";
+            this.Text = "Музика";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MusicForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);

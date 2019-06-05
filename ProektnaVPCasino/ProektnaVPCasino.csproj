@@ -162,9 +162,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Music\Galoski_remix.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +181,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiLowGameLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roulette.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slot-machine.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
