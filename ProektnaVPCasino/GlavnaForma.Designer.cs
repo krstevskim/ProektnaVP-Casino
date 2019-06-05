@@ -37,6 +37,7 @@
             this.uplatiPari = new System.Windows.Forms.Button();
             this.musicFormBtn = new System.Windows.Forms.Button();
             this.slotMachineBtn = new System.Windows.Forms.Button();
+            this.roulleteBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -124,11 +125,22 @@
             this.slotMachineBtn.UseVisualStyleBackColor = true;
             this.slotMachineBtn.Click += new System.EventHandler(this.slotMachineBtn_Click);
             // 
+            // roulleteBtn
+            // 
+            this.roulleteBtn.Location = new System.Drawing.Point(482, 149);
+            this.roulleteBtn.Name = "roulleteBtn";
+            this.roulleteBtn.Size = new System.Drawing.Size(118, 84);
+            this.roulleteBtn.TabIndex = 11;
+            this.roulleteBtn.Text = "Start Roullete Game";
+            this.roulleteBtn.UseVisualStyleBackColor = true;
+            this.roulleteBtn.Click += new System.EventHandler(this.roulleteBtn_Click);
+            // 
             // GlavnaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.roulleteBtn);
             this.Controls.Add(this.slotMachineBtn);
             this.Controls.Add(this.musicFormBtn);
             this.Controls.Add(this.uplatiPari);
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Button uplatiPari;
         private System.Windows.Forms.Button musicFormBtn;
         private System.Windows.Forms.Button slotMachineBtn;
+        private System.Windows.Forms.Button roulleteBtn;
     }
 }

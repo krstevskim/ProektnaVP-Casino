@@ -116,5 +116,13 @@ namespace ProektnaVPCasino
                 this.Visible = true;
             }
         }
+
+        private void roulleteBtn_Click(object sender, EventArgs e)
+        {
+            RoulleteForm form = new RoulleteForm();
+            this.Visible = false;
+            form.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
