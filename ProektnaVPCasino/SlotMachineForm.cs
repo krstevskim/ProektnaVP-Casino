@@ -27,8 +27,6 @@ namespace ProektnaVPCasino
         public int pariInt { get; set; }
 
 
-
-
         public SlotMachineForm(GlavnaForma parent, int startCash)
         {
             InitializeComponent();
@@ -87,25 +85,6 @@ namespace ProektnaVPCasino
             totalMoney.Text = pariInt.ToString();
         }
 
-        private void timer4_Tick(object sender, EventArgs e)
-        {
-            SlotsValues[3] = r.Next(1, 8);
-            SlotsValues[8] = r.Next(1, 8);
-            SlotsValues[13] = r.Next(1, 8);
-           // SlotsValues[18] = r.Next(1, 8);
-            Slot4.Image = Sliki[SlotsValues[3] - 1];
-            Slot9.Image = Sliki[SlotsValues[8] - 1];
-            Slot14.Image = Sliki[SlotsValues[13] - 1];
-            //Slot19.Image = Image.FromFile(SlotsValues[18].ToString() + ".jpg");
-            fourthRow++;
-            if (fourthRow == 20)
-            {
-
-                timer4.Stop();
-                fourthRow = 0;
-            }
-        }
-
         private void timer5_Tick(object sender, EventArgs e)
         {
             SlotsValues[4] = r.Next(1, 8);
@@ -133,6 +112,25 @@ namespace ProektnaVPCasino
             }
         }
 
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            SlotsValues[3] = r.Next(1, 8);
+            SlotsValues[8] = r.Next(1, 8);
+            SlotsValues[13] = r.Next(1, 8);
+           // SlotsValues[18] = r.Next(1, 8);
+            Slot4.Image = Sliki[SlotsValues[3] - 1];
+            Slot9.Image = Sliki[SlotsValues[8] - 1];
+            Slot14.Image = Sliki[SlotsValues[13] - 1];
+            //Slot19.Image = Image.FromFile(SlotsValues[18].ToString() + ".jpg");
+            fourthRow++;
+            if (fourthRow == 20)
+            {
+
+                timer4.Stop();
+                fourthRow = 0;
+            }
+        }
+
         private void timer3_Tick(object sender, EventArgs e)
         {
             SlotsValues[2] = r.Next(1, 8);
@@ -149,31 +147,6 @@ namespace ProektnaVPCasino
                 timer3.Stop();
                 thirdRow = 0;
             }
-        }
-
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-
-        }
-
-        private void SpinBtn_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
-
-        private void musicBtn_Click(object sender, EventArgs e)
-        {
-            if (parent.mform == null)
-            {
-                parent.mform = new MusicForm();
-            }
-            parent.mform.Show();
-        }
-
-        private void CashOutBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -214,6 +187,32 @@ namespace ProektnaVPCasino
                 firstRow = 0; 
             }
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+
+        }
+
+        private void SpinBtn_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void musicBtn_Click(object sender, EventArgs e)
+        {
+            if (parent.mform == null)
+            {
+                parent.mform = new MusicForm();
+            }
+            parent.mform.Show();
+        }
+
+        private void CashOutBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         private void SpinBtn_Click(object sender, EventArgs e)
         {

@@ -52,12 +52,14 @@ namespace ProektnaVPCasino
         private bool proverkaPari()
         {
             //Pravi proverki dali ima dovolno pari i dali e korekten inputot za da nema exception
-            if (pariZaSlednaIgra.Text == "" || int.Parse(pariZaSlednaIgra.Text) == 0)
+            int f = 0;
+            int.TryParse(pariZaSlednaIgra.Text, out f);
+            if (pariZaSlednaIgra.Text == "" ||  f == 0 )
             {
                 MessageBox.Show("Vnesete validna suma za sledna igra");
                 return false;
             }
-            else if (int.Parse(pariZaSlednaIgra.Text) > vkupnoPari)
+            else if (f > vkupnoPari)
             {
                 MessageBox.Show("Nemate tolku pari");
                 return false;
@@ -113,6 +115,26 @@ namespace ProektnaVPCasino
                 vkupnoPari = vkupnoPari + slotMachineForm.pariInt;
                 update();
                 this.Location = slotMachineForm.Location;
+                this.Visible = true;
+            }
+        }
+
+        private void roulleteBtn_Click(object sender, EventArgs e)
+        {
+            if (proverkaPari())
+            {
+                vkupnoPari = vkupnoPari - int.Parse(pariZaSlednaIgra.Text);
+                RoulleteForm roulleteForm = new RoulleteForm(this, int.Parse(pariZaSlednaIgra.Text));
+                roulleteForm.StartPosition = FormStartPosition.Manual;
+                roulleteForm.Location = new Point(this.Location.X, this.Location.Y);
+                this.Visible = false;
+                if (mform != null)
+                    mform.Hide();
+
+                roulleteForm.ShowDialog();
+                vkupnoPari = vkupnoPari + roulleteForm.pariInt;
+                update();
+                this.Location = roulleteForm.Location;
                 this.Visible = true;
             }
         }

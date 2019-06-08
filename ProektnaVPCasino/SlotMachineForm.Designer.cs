@@ -217,20 +217,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 505);
+            this.label1.Location = new System.Drawing.Point(9, 506);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Total";
+            this.label1.Text = "Вкупно Пари";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(230, 505);
+            this.label2.Location = new System.Drawing.Point(241, 505);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Bet:";
+            this.label2.Text = "Облог:";
             // 
             // Bet
             // 
@@ -247,7 +247,7 @@
             0});
             this.Bet.Name = "Bet";
             this.Bet.ReadOnly = true;
-            this.Bet.Size = new System.Drawing.Size(120, 20);
+            this.Bet.Size = new System.Drawing.Size(60, 20);
             this.Bet.TabIndex = 23;
             this.Bet.TabStop = false;
             this.Bet.Value = new decimal(new int[] {
@@ -263,7 +263,7 @@
             this.SpinBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SpinBtn.Size = new System.Drawing.Size(75, 23);
             this.SpinBtn.TabIndex = 24;
-            this.SpinBtn.Text = "Spin";
+            this.SpinBtn.Text = "Врти";
             this.SpinBtn.UseVisualStyleBackColor = true;
             this.SpinBtn.Click += new System.EventHandler(this.SpinBtn_Click);
             this.SpinBtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpinBtn_KeyDown);
@@ -275,7 +275,7 @@
             this.CashOutBtn.Size = new System.Drawing.Size(75, 23);
             this.CashOutBtn.TabIndex = 25;
             this.CashOutBtn.TabStop = false;
-            this.CashOutBtn.Text = "Cash Out";
+            this.CashOutBtn.Text = "Искеширај";
             this.CashOutBtn.UseVisualStyleBackColor = true;
             this.CashOutBtn.Click += new System.EventHandler(this.CashOutBtn_Click);
             // 
@@ -284,9 +284,9 @@
             this.WinLabel.AutoSize = true;
             this.WinLabel.Location = new System.Drawing.Point(24, 399);
             this.WinLabel.Name = "WinLabel";
-            this.WinLabel.Size = new System.Drawing.Size(50, 13);
+            this.WinLabel.Size = new System.Drawing.Size(52, 13);
             this.WinLabel.TabIndex = 26;
-            this.WinLabel.Text = "TotalWin";
+            this.WinLabel.Text = "Добивка";
             // 
             // WinTB
             // 
@@ -304,7 +304,7 @@
             this.musicBtn.Size = new System.Drawing.Size(75, 75);
             this.musicBtn.TabIndex = 28;
             this.musicBtn.TabStop = false;
-            this.musicBtn.Text = "Music";
+            this.musicBtn.Text = "Музика";
             this.musicBtn.UseVisualStyleBackColor = true;
             this.musicBtn.Click += new System.EventHandler(this.musicBtn_Click);
             // 
@@ -338,7 +338,7 @@
             this.Controls.Add(this.Slot2);
             this.Controls.Add(this.Slot1);
             this.Name = "SlotMachineForm";
-            this.Text = "Form1";
+            this.Text = "Слот Машина";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
