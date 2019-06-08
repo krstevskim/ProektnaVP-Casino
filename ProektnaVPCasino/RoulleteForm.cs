@@ -41,6 +41,7 @@ namespace ProektnaVPCasino
         public RoulleteForm(GlavnaForma parent,int startCash)
         {
             InitializeComponent();
+            DoubleBuffered = true;
             this.parent = parent;
             temp = new List<RoulleteNumbers>();
             timer1 = new Timer();
@@ -51,7 +52,6 @@ namespace ProektnaVPCasino
             pozicija = r.Next(5, 36);
             int i = pozicija-5;
             pariInt = startCash;
-            
             totalMoney.Text = pariInt.ToString();
             multiSize = 1;
             clickedLabels = new List<Label>();
@@ -170,10 +170,10 @@ namespace ProektnaVPCasino
             temp[3] = temp2;
 
             pozicija++;
-            if(elapsedTime>timeRotate/2)
+            if(elapsedTime>timeRotate/4&& elapsedTime<timeRotate/2)
+                timer1.Interval += 5;
+            if (elapsedTime > timeRotate / 2)
                 timer1.Interval += 10;
-        RoulleteNumbers result = numbers.Find(x => x.number == 1);
-        result.bet = 10;
         }
 
         public bool validate()
@@ -317,15 +317,14 @@ namespace ProektnaVPCasino
 
         private void label1_DoubleClick(object sender, EventArgs e)
         {
-            if (!clickedLabels.Contains(label1)) { 
             RoulleteNumbers result = numbers.Find(x => x.number == 1);
+            if (!clickedLabels.Contains(label1)) { 
             if (getMoney()) result.bet = (int)betTip.Value;
             clickedLabels.Add(label1);
             
         }
             else
             {
-                RoulleteNumbers result = numbers.Find(x => x.number == 1);
                 pariInt += result.bet;result.bet = 0;
                 clickedLabels.Remove(label1);
             }
@@ -334,16 +333,15 @@ namespace ProektnaVPCasino
 
         private void label2_DoubleClick(object sender, EventArgs e)
         {
+                RoulleteNumbers result = numbers.Find(x => x.number == 2);
             if (!clickedLabels.Contains(label2))
             {
-                RoulleteNumbers result = numbers.Find(x => x.number == 2);
                 if (getMoney()) result.bet = (int)betTip.Value;
                 clickedLabels.Add(label2);
 
             }
             else
             {
-                RoulleteNumbers result = numbers.Find(x => x.number == 2);
                 pariInt += result.bet; result.bet = 0;
                 clickedLabels.Remove(label2);
             }
@@ -352,16 +350,15 @@ namespace ProektnaVPCasino
 
         private void label3_DoubleClick(object sender, EventArgs e)
         {
+                RoulleteNumbers result = numbers.Find(x => x.number == 3);
             if (!clickedLabels.Contains(label3))
             {
-                RoulleteNumbers result = numbers.Find(x => x.number == 3);
                 if (getMoney()) result.bet = (int)betTip.Value;
                 clickedLabels.Add(label3);
 
             }
             else
             {
-                RoulleteNumbers result = numbers.Find(x => x.number == 3);
                 pariInt += result.bet; result.bet = 0;
                 clickedLabels.Remove(label3);
             }

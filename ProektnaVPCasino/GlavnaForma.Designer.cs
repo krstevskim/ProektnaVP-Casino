@@ -64,7 +64,7 @@
             // 
             // pariZaSlednaIgra
             // 
-            this.pariZaSlednaIgra.Location = new System.Drawing.Point(137, 353);
+            this.pariZaSlednaIgra.Location = new System.Drawing.Point(144, 382);
             this.pariZaSlednaIgra.Name = "pariZaSlednaIgra";
             this.pariZaSlednaIgra.Size = new System.Drawing.Size(161, 20);
             this.pariZaSlednaIgra.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(135, 326);
+            this.label3.Location = new System.Drawing.Point(142, 355);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 20);
             this.label3.TabIndex = 7;
@@ -111,7 +111,7 @@
             // 
             // musicFormBtn
             // 
-            this.musicFormBtn.Location = new System.Drawing.Point(481, 79);
+            this.musicFormBtn.Location = new System.Drawing.Point(481, 89);
             this.musicFormBtn.Name = "musicFormBtn";
             this.musicFormBtn.Size = new System.Drawing.Size(100, 84);
             this.musicFormBtn.TabIndex = 9;
