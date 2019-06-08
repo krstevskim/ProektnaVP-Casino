@@ -138,5 +138,27 @@ namespace ProektnaVPCasino
                 this.Visible = true;
             }
         }
+
+        private void KenoGameBtn_Click(object sender, EventArgs e)
+        {
+            if (proverkaPari())
+            {
+                vkupnoPari = vkupnoPari - int.Parse(pariZaSlednaIgra.Text);
+                KenoForm kenoForm1 = new KenoForm(this, int.Parse(pariZaSlednaIgra.Text));
+                kenoForm1.StartPosition = FormStartPosition.Manual;
+                kenoForm1.Location = new Point(this.Location.X, this.Location.Y);
+                this.Visible = false;
+
+                if (mform != null)
+                    mform.Hide();
+
+                kenoForm1.ShowDialog();
+                vkupnoPari = vkupnoPari + kenoForm1.TotalMoney;
+                update();
+                this.Location = kenoForm1.Location;
+                this.Location = kenoForm1.Location;
+                this.Visible = true;
+            }
+        }
     }
 }
