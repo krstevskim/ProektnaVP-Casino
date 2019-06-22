@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using ProektnaVPCasino.Properties;
 using System.Timers;
 using System.Text.RegularExpressions;
+using System.Media;
+using System.Diagnostics;
 
 namespace ProektnaVPCasino
 {
@@ -31,7 +33,7 @@ namespace ProektnaVPCasino
         public int i = 0;
         public int cashOutMoney { get; set; }
         public int pariInt { get; set; }
-        
+        SoundPlayer audio;
         public HiLowForm(GlavnaForma parent, int startCash)
         {
             InitializeComponent();
@@ -57,9 +59,23 @@ namespace ProektnaVPCasino
             betTip.Maximum = 100;
             timer1.Start();
             update();
+            playAudio(0);
             DoubleBuffered = true;
         }
-
+        private void playAudio(int tip)
+        {
+            audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.shuffleCards);
+            if (tip == 1)
+            {
+                audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.winSound);
+            }
+            if (tip == 2)
+            {
+                audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.loseSound);
+            }
+            
+            audio.Play();
+        }
         public void generateNextCard()
         {
                 timer1.Stop();              
@@ -88,12 +104,14 @@ namespace ProektnaVPCasino
             //Proverue dali korisnikot odbral Visoka
             if((nextCardVal == 1 && nextCard>currCard)||(nextCardVal == 0 && nextCard < currCard))
             {
+                playAudio(1);
                 MessageBox.Show("Bravo");
                 pogodeniKarti++;
                 dobivka = (int)betTip.Value * pogodeniKarti + int.Parse(cashOutAmount.Text);
             }
             else
             {
+                playAudio(2);
                 MessageBox.Show("BOOOO");
                 reset();
             }
@@ -107,8 +125,9 @@ namespace ProektnaVPCasino
             cashOutAmount.Text = dobivka.ToString();
             pogodeni.Text = pogodeniKarti.ToString();
             currCard = nextCard;           
-            picBoxCurr.Image = cards[currCard - 1];      
+            picBoxCurr.Image = cards[currCard - 1];
             //picBoxNext.Image = picBoxNext.ErrorImage;
+            playAudio(0);
             timer1.Start();
         }
         
@@ -145,6 +164,7 @@ namespace ProektnaVPCasino
             nextCardVal = 1;
             btnClickfunciton();
             betTip.Enabled = false;
+
             update();
             generateNextCard();
             checkCards();
@@ -171,6 +191,8 @@ namespace ProektnaVPCasino
             betTip.Maximum = 100;
             cashOutAmount.Text = "0";
             betTip.Enabled = true;
+            currCard = 7;
+            picBoxCurr.Image = cards[currCard - 1];
             if (betTip.Minimum > pariInt)
             {
                 betTip.Minimum = pariInt;
@@ -211,6 +233,7 @@ namespace ProektnaVPCasino
             pariInt = pariInt + dobivka;
             cashOutMoney = int.Parse(pari.Text);
             reset();
+            audio.Stop();
         }
 
         private void musicBtn_Click(object sender, EventArgs e)
@@ -220,6 +243,11 @@ namespace ProektnaVPCasino
                 parent.mform = new MusicForm();
             }
                 parent.mform.Show();
+        }
+
+        private void betTip_ValueChanged(object sender, EventArgs e)
+        {
+            reset();
         }
     }
 }

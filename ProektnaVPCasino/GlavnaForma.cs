@@ -23,32 +23,27 @@ namespace ProektnaVPCasino
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            povikajHiLow();
-        }
-        private void povikajHiLow()
-        {
+            //HiLow
             if (proverkaPari())
             {
                 vkupnoPari = vkupnoPari - int.Parse(pariZaSlednaIgra.Text);
-                HiLowForm HiLowForm1 = new HiLowForm(this,int.Parse(pariZaSlednaIgra.Text));
-                HiLowForm1.Width = this.Width;
-                HiLowForm1.Height = this.Height;
+                HiLowForm HiLowForm1 = new HiLowForm(this, int.Parse(pariZaSlednaIgra.Text));
+
                 HiLowForm1.StartPosition = FormStartPosition.Manual;
                 HiLowForm1.Location = new Point(this.Location.X, this.Location.Y);
                 this.Visible = false;
-                if(mform != null)
+                if (mform != null)
                     mform.Hide();
-                
+
                 HiLowForm1.ShowDialog();
                 vkupnoPari = vkupnoPari + HiLowForm1.cashOutMoney;
                 update();
                 this.Location = HiLowForm1.Location;
                 this.Location = HiLowForm1.Location;
-                this.Width = HiLowForm1.Width;
-                this.Height = HiLowForm1.Height;
                 this.Visible = true;
             }
         }
+        
         private bool proverkaPari()
         {
             //Pravi proverki dali ima dovolno pari i dali e korekten inputot za da nema exception
@@ -73,7 +68,7 @@ namespace ProektnaVPCasino
             DialogResult result = form.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                vkupnoPari = form.suma;
+                vkupnoPari += form.suma;
                 update();
             }
         }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,7 +27,7 @@ namespace ProektnaVPCasino
         List<Image> Sliki { get; set; }
         public int pariInt { get; set; }
 
-
+        int timee1 = 0;int timee2 = 0;int timee3 = 0;int timee4 = 0;int timee5=0;
         public SlotMachineForm(GlavnaForma parent, int startCash)
         {
             InitializeComponent();
@@ -54,6 +55,7 @@ namespace ProektnaVPCasino
             timer5 = new Timer();
             timer5.Interval = 50;
             timer5.Tick += new EventHandler(timer5_Tick);
+            
             for (int i = 0; i < 15; i++) {
                 SlotsValues[i] = r.Next(1, 8);
             }
@@ -110,6 +112,7 @@ namespace ProektnaVPCasino
                 pariInt = tmp + Win;
                 SpinBtn.Enabled = true;
             }
+            timee5 += timer5.Interval;
         }
 
         private void timer4_Tick(object sender, EventArgs e)
@@ -129,6 +132,7 @@ namespace ProektnaVPCasino
                 timer4.Stop();
                 fourthRow = 0;
             }
+            timee4 += timer4.Interval;
         }
 
         private void timer3_Tick(object sender, EventArgs e)
@@ -147,6 +151,7 @@ namespace ProektnaVPCasino
                 timer3.Stop();
                 thirdRow = 0;
             }
+            timee3 += timer3.Interval;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -166,6 +171,7 @@ namespace ProektnaVPCasino
                 timer2.Stop();
                 secondRow = 0;
             }
+            timee2 += timer2.Interval;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -186,8 +192,26 @@ namespace ProektnaVPCasino
                 timer1.Stop();
                 firstRow = 0; 
             }
+            timee1 += timer1.Interval;
         }
 
+        private void playAudio(int tip)
+        {//Function for playing different sounds 
+            SoundPlayer audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.slotMachineSpin);
+            if (tip == 1)
+            {
+                audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.winSound);
+            }
+            if (tip == 2)
+            {
+                audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.loseSound);
+            }
+            if (tip == 3)
+            {
+                audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.leverPullingSlot);
+            }
+            audio.Play();
+        }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             
@@ -226,18 +250,37 @@ namespace ProektnaVPCasino
                 totalMoney.Text = (flag - (int)Bet.Value).ToString();
 
                 SpinBtn.Enabled = false;
-               
-                
+
+                Stopwatch sw = new Stopwatch();
+                playAudio(3);
+                sw.Start(); 
+                for (int i = 0; ; i++)
+                {
+                    if (i % 100000 == 0) 
+                    {
+                        sw.Stop();
+                        if (sw.ElapsedMilliseconds > 1400) 
+                        {
+                            break; 
+                        }
+                        else { 
+                            sw.Start(); 
+                        }
+                    }
+                }
 
                 timer1.Start();
                 timer2.Start();
                 timer3.Start();
                 timer4.Start();
                 timer5.Start();
+                playAudio(0);
             }
           
         }
+        
         private int CalculateWin() {
+            //Win Calculation function
             int totalWin = 0;
             if (SlotsValues[0] == SlotsValues[1] && SlotsValues[0] == SlotsValues[2] && SlotsValues[0] == SlotsValues[3] && SlotsValues[0] == SlotsValues[4])
             {
@@ -552,11 +595,18 @@ namespace ProektnaVPCasino
             else {
                 totalWin += 0;
             }
-                
-
-           
 
 
+
+            if (totalWin > 0)
+            {
+                playAudio(1);
+            }
+            else
+            {
+                playAudio(2);
+            }
+            
             return totalWin;
 
 

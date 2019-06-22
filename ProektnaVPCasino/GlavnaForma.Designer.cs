@@ -45,10 +45,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Khaki;
             this.label1.Location = new System.Drawing.Point(231, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 42);
+            this.label1.Size = new System.Drawing.Size(175, 45);
             this.label1.TabIndex = 2;
             this.label1.Text = "Казино";
             // 
@@ -72,7 +74,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Khaki;
             this.label2.Location = new System.Drawing.Point(518, 380);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 24);
@@ -82,7 +86,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Khaki;
             this.label3.Location = new System.Drawing.Point(226, 377);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 20);
@@ -112,7 +118,7 @@
             // KenoGameBtn
             // 
             this.KenoGameBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.KenoGameBtn.Image = global::ProektnaVPCasino.Properties.Resources.kenoLogo2;
+            this.KenoGameBtn.Image = ((System.Drawing.Image)(resources.GetObject("KenoGameBtn.Image")));
             this.KenoGameBtn.Location = new System.Drawing.Point(157, 188);
             this.KenoGameBtn.Name = "KenoGameBtn";
             this.KenoGameBtn.Size = new System.Drawing.Size(140, 96);
@@ -122,7 +128,7 @@
             // 
             // roulleteBtn
             // 
-            this.roulleteBtn.Image = global::ProektnaVPCasino.Properties.Resources.roulette;
+            this.roulleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("roulleteBtn.Image")));
             this.roulleteBtn.Location = new System.Drawing.Point(322, 188);
             this.roulleteBtn.Name = "roulleteBtn";
             this.roulleteBtn.Size = new System.Drawing.Size(140, 96);
@@ -132,7 +138,7 @@
             // 
             // slotMachineBtn
             // 
-            this.slotMachineBtn.Image = global::ProektnaVPCasino.Properties.Resources.Slot_machine;
+            this.slotMachineBtn.Image = ((System.Drawing.Image)(resources.GetObject("slotMachineBtn.Image")));
             this.slotMachineBtn.Location = new System.Drawing.Point(157, 86);
             this.slotMachineBtn.Name = "slotMachineBtn";
             this.slotMachineBtn.Size = new System.Drawing.Size(140, 96);
@@ -155,6 +161,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(640, 450);
             this.Controls.Add(this.KenoGameBtn);
@@ -168,6 +176,9 @@
             this.Controls.Add(this.pariZaSlednaIgra);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "GlavnaForma";
             this.Text = "Казино";
             this.Load += new System.EventHandler(this.GlavnaForma_Load);

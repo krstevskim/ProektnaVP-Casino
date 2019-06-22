@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,7 +46,13 @@ namespace ProektnaVPCasino
             
 
         }
+        private void playAudio()
+        {
+            SoundPlayer audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.odbranaBrojka);
+            
+            audio.Play();
 
+        }
         private void Timer_Tick(object sender, EventArgs e)
         {
 
@@ -137,7 +144,7 @@ namespace ProektnaVPCasino
                     ShowResult.Enabled = true;
                     timer.Stop();
                 }
-
+                playAudio();
 
 
 
