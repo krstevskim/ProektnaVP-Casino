@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +26,7 @@ namespace ProektnaVPCasino
             new RoulleteNumbers(28,Color.Black),new RoulleteNumbers(12,Color.Red),new RoulleteNumbers(35,Color.Black),new RoulleteNumbers(3,Color.Red),
             new RoulleteNumbers(26,Color.Black)
         };
+        
         private GlavnaForma parent;
         public List<Label> clickedLabels;
         public int pozicija { get; set; }
@@ -47,7 +49,7 @@ namespace ProektnaVPCasino
             timer1 = new Timer();
             timer1.Interval = 50;
             timer1.Tick += new EventHandler(timer1_Tick);
-            timeRotate = r.Next(7, 9) * 1000;
+            timeRotate = 6800;
             elapsedTime = 0;
             pozicija = r.Next(5, 36);
             int i = pozicija-5;
@@ -79,6 +81,7 @@ namespace ProektnaVPCasino
             if (elapsedTime > timeRotate)
             {
                 timer1.Stop();
+                
                 calcWin();
                 return;
             }
@@ -86,6 +89,19 @@ namespace ProektnaVPCasino
             rotate();
             refreshImages();
             
+        }
+        private void playAudio(int tip)
+        {
+            SoundPlayer audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.rouletteSpin_DropBall_8S);
+            if (tip == 1)
+            {
+                audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.winSound);
+            }
+            if (tip == 2)
+            {
+                audio = new SoundPlayer(ProektnaVPCasino.Properties.Resources.loseSound);
+            }
+            audio.Play();
         }
 
         private void reset()
@@ -147,6 +163,14 @@ namespace ProektnaVPCasino
             if (highNUD.Value > 0 && winNum.number >=19)
             {
                 win = win + (int)highNUD.Value*2;
+            }
+            if (win > 0)
+            {
+                playAudio(1);
+            }
+            else
+            {
+                playAudio(2);
             }
             pariInt += win;
             totalMoney.Text = pariInt.ToString();
@@ -226,8 +250,8 @@ namespace ProektnaVPCasino
             //Begins game
             if (validate())
             {
-
                 timer1.Start();
+                playAudio(0);
                 disableBtns();
                 beginBtn.Enabled = false;
                 resetBtn.Enabled = false;
@@ -254,6 +278,7 @@ namespace ProektnaVPCasino
                 vkupenVlog1 += num.bet;
                 if (num.bet > 0)
                 {
+                   
                     uplateniBroevi.Text += num.number.ToString() + " ";
                     uplateniBroeviTip.Text += num.bet.ToString() + " ";
                 }

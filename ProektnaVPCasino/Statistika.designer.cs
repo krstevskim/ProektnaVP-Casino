@@ -132,6 +132,7 @@
             this.NoBTN.TabIndex = 8;
             this.NoBTN.Text = "Не";
             this.NoBTN.UseVisualStyleBackColor = true;
+            this.NoBTN.Click += new System.EventHandler(this.NoBTN_Click);
             // 
             // IzvleceniTB
             // 

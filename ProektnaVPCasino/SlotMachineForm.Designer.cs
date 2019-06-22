@@ -28,21 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Slot1 = new System.Windows.Forms.PictureBox();
-            this.Slot2 = new System.Windows.Forms.PictureBox();
-            this.Slot3 = new System.Windows.Forms.PictureBox();
-            this.Slot4 = new System.Windows.Forms.PictureBox();
-            this.Slot5 = new System.Windows.Forms.PictureBox();
-            this.Slot6 = new System.Windows.Forms.PictureBox();
-            this.Slot7 = new System.Windows.Forms.PictureBox();
-            this.Slot8 = new System.Windows.Forms.PictureBox();
-            this.Slot9 = new System.Windows.Forms.PictureBox();
-            this.Slot10 = new System.Windows.Forms.PictureBox();
-            this.Slot11 = new System.Windows.Forms.PictureBox();
-            this.Slot12 = new System.Windows.Forms.PictureBox();
-            this.Slot13 = new System.Windows.Forms.PictureBox();
-            this.Slot14 = new System.Windows.Forms.PictureBox();
-            this.Slot15 = new System.Windows.Forms.PictureBox();
             this.totalMoney = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,158 +37,38 @@
             this.WinLabel = new System.Windows.Forms.Label();
             this.WinTB = new System.Windows.Forms.TextBox();
             this.musicBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot15)).BeginInit();
+            this.Slot15 = new System.Windows.Forms.PictureBox();
+            this.Slot14 = new System.Windows.Forms.PictureBox();
+            this.Slot13 = new System.Windows.Forms.PictureBox();
+            this.Slot12 = new System.Windows.Forms.PictureBox();
+            this.Slot11 = new System.Windows.Forms.PictureBox();
+            this.Slot10 = new System.Windows.Forms.PictureBox();
+            this.Slot9 = new System.Windows.Forms.PictureBox();
+            this.Slot8 = new System.Windows.Forms.PictureBox();
+            this.Slot7 = new System.Windows.Forms.PictureBox();
+            this.Slot6 = new System.Windows.Forms.PictureBox();
+            this.Slot5 = new System.Windows.Forms.PictureBox();
+            this.Slot4 = new System.Windows.Forms.PictureBox();
+            this.Slot3 = new System.Windows.Forms.PictureBox();
+            this.Slot2 = new System.Windows.Forms.PictureBox();
+            this.Slot1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Bet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Slot1
-            // 
-            this.Slot1.Location = new System.Drawing.Point(12, 30);
-            this.Slot1.Name = "Slot1";
-            this.Slot1.Size = new System.Drawing.Size(126, 85);
-            this.Slot1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot1.TabIndex = 0;
-            this.Slot1.TabStop = false;
-            // 
-            // Slot2
-            // 
-            this.Slot2.Location = new System.Drawing.Point(144, 30);
-            this.Slot2.Name = "Slot2";
-            this.Slot2.Size = new System.Drawing.Size(126, 85);
-            this.Slot2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot2.TabIndex = 1;
-            this.Slot2.TabStop = false;
-            // 
-            // Slot3
-            // 
-            this.Slot3.Location = new System.Drawing.Point(276, 30);
-            this.Slot3.Name = "Slot3";
-            this.Slot3.Size = new System.Drawing.Size(126, 85);
-            this.Slot3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot3.TabIndex = 2;
-            this.Slot3.TabStop = false;
-            // 
-            // Slot4
-            // 
-            this.Slot4.Location = new System.Drawing.Point(408, 30);
-            this.Slot4.Name = "Slot4";
-            this.Slot4.Size = new System.Drawing.Size(126, 85);
-            this.Slot4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot4.TabIndex = 3;
-            this.Slot4.TabStop = false;
-            // 
-            // Slot5
-            // 
-            this.Slot5.Location = new System.Drawing.Point(540, 30);
-            this.Slot5.Name = "Slot5";
-            this.Slot5.Size = new System.Drawing.Size(126, 85);
-            this.Slot5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot5.TabIndex = 4;
-            this.Slot5.TabStop = false;
-            // 
-            // Slot6
-            // 
-            this.Slot6.Location = new System.Drawing.Point(12, 121);
-            this.Slot6.Name = "Slot6";
-            this.Slot6.Size = new System.Drawing.Size(126, 85);
-            this.Slot6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot6.TabIndex = 5;
-            this.Slot6.TabStop = false;
-            // 
-            // Slot7
-            // 
-            this.Slot7.Location = new System.Drawing.Point(144, 121);
-            this.Slot7.Name = "Slot7";
-            this.Slot7.Size = new System.Drawing.Size(126, 85);
-            this.Slot7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot7.TabIndex = 6;
-            this.Slot7.TabStop = false;
-            // 
-            // Slot8
-            // 
-            this.Slot8.Location = new System.Drawing.Point(276, 121);
-            this.Slot8.Name = "Slot8";
-            this.Slot8.Size = new System.Drawing.Size(126, 85);
-            this.Slot8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot8.TabIndex = 7;
-            this.Slot8.TabStop = false;
-            // 
-            // Slot9
-            // 
-            this.Slot9.Location = new System.Drawing.Point(408, 121);
-            this.Slot9.Name = "Slot9";
-            this.Slot9.Size = new System.Drawing.Size(126, 85);
-            this.Slot9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot9.TabIndex = 8;
-            this.Slot9.TabStop = false;
-            // 
-            // Slot10
-            // 
-            this.Slot10.Location = new System.Drawing.Point(540, 121);
-            this.Slot10.Name = "Slot10";
-            this.Slot10.Size = new System.Drawing.Size(126, 85);
-            this.Slot10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot10.TabIndex = 9;
-            this.Slot10.TabStop = false;
-            // 
-            // Slot11
-            // 
-            this.Slot11.Location = new System.Drawing.Point(12, 212);
-            this.Slot11.Name = "Slot11";
-            this.Slot11.Size = new System.Drawing.Size(126, 85);
-            this.Slot11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot11.TabIndex = 10;
-            this.Slot11.TabStop = false;
-            // 
-            // Slot12
-            // 
-            this.Slot12.Location = new System.Drawing.Point(144, 212);
-            this.Slot12.Name = "Slot12";
-            this.Slot12.Size = new System.Drawing.Size(126, 85);
-            this.Slot12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot12.TabIndex = 11;
-            this.Slot12.TabStop = false;
-            // 
-            // Slot13
-            // 
-            this.Slot13.Location = new System.Drawing.Point(276, 212);
-            this.Slot13.Name = "Slot13";
-            this.Slot13.Size = new System.Drawing.Size(126, 85);
-            this.Slot13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot13.TabIndex = 12;
-            this.Slot13.TabStop = false;
-            // 
-            // Slot14
-            // 
-            this.Slot14.Location = new System.Drawing.Point(408, 212);
-            this.Slot14.Name = "Slot14";
-            this.Slot14.Size = new System.Drawing.Size(126, 85);
-            this.Slot14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot14.TabIndex = 13;
-            this.Slot14.TabStop = false;
-            // 
-            // Slot15
-            // 
-            this.Slot15.Location = new System.Drawing.Point(540, 212);
-            this.Slot15.Name = "Slot15";
-            this.Slot15.Size = new System.Drawing.Size(126, 85);
-            this.Slot15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Slot15.TabIndex = 14;
-            this.Slot15.TabStop = false;
             // 
             // totalMoney
             // 
@@ -217,6 +82,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Wheat;
             this.label1.Location = new System.Drawing.Point(9, 506);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
@@ -226,6 +93,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.Wheat;
             this.label2.Location = new System.Drawing.Point(241, 505);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
@@ -282,6 +151,8 @@
             // WinLabel
             // 
             this.WinLabel.AutoSize = true;
+            this.WinLabel.BackColor = System.Drawing.Color.Transparent;
+            this.WinLabel.ForeColor = System.Drawing.Color.Wheat;
             this.WinLabel.Location = new System.Drawing.Point(24, 399);
             this.WinLabel.Name = "WinLabel";
             this.WinLabel.Size = new System.Drawing.Size(52, 13);
@@ -308,10 +179,147 @@
             this.musicBtn.UseVisualStyleBackColor = true;
             this.musicBtn.Click += new System.EventHandler(this.musicBtn_Click);
             // 
+            // Slot15
+            // 
+            this.Slot15.Location = new System.Drawing.Point(540, 212);
+            this.Slot15.Name = "Slot15";
+            this.Slot15.Size = new System.Drawing.Size(126, 85);
+            this.Slot15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot15.TabIndex = 14;
+            this.Slot15.TabStop = false;
+            // 
+            // Slot14
+            // 
+            this.Slot14.Location = new System.Drawing.Point(408, 212);
+            this.Slot14.Name = "Slot14";
+            this.Slot14.Size = new System.Drawing.Size(126, 85);
+            this.Slot14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot14.TabIndex = 13;
+            this.Slot14.TabStop = false;
+            // 
+            // Slot13
+            // 
+            this.Slot13.Location = new System.Drawing.Point(276, 212);
+            this.Slot13.Name = "Slot13";
+            this.Slot13.Size = new System.Drawing.Size(126, 85);
+            this.Slot13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot13.TabIndex = 12;
+            this.Slot13.TabStop = false;
+            // 
+            // Slot12
+            // 
+            this.Slot12.Location = new System.Drawing.Point(144, 212);
+            this.Slot12.Name = "Slot12";
+            this.Slot12.Size = new System.Drawing.Size(126, 85);
+            this.Slot12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot12.TabIndex = 11;
+            this.Slot12.TabStop = false;
+            // 
+            // Slot11
+            // 
+            this.Slot11.Location = new System.Drawing.Point(12, 212);
+            this.Slot11.Name = "Slot11";
+            this.Slot11.Size = new System.Drawing.Size(126, 85);
+            this.Slot11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot11.TabIndex = 10;
+            this.Slot11.TabStop = false;
+            // 
+            // Slot10
+            // 
+            this.Slot10.Location = new System.Drawing.Point(540, 121);
+            this.Slot10.Name = "Slot10";
+            this.Slot10.Size = new System.Drawing.Size(126, 85);
+            this.Slot10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot10.TabIndex = 9;
+            this.Slot10.TabStop = false;
+            // 
+            // Slot9
+            // 
+            this.Slot9.Location = new System.Drawing.Point(408, 121);
+            this.Slot9.Name = "Slot9";
+            this.Slot9.Size = new System.Drawing.Size(126, 85);
+            this.Slot9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot9.TabIndex = 8;
+            this.Slot9.TabStop = false;
+            // 
+            // Slot8
+            // 
+            this.Slot8.Location = new System.Drawing.Point(276, 121);
+            this.Slot8.Name = "Slot8";
+            this.Slot8.Size = new System.Drawing.Size(126, 85);
+            this.Slot8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot8.TabIndex = 7;
+            this.Slot8.TabStop = false;
+            // 
+            // Slot7
+            // 
+            this.Slot7.Location = new System.Drawing.Point(144, 121);
+            this.Slot7.Name = "Slot7";
+            this.Slot7.Size = new System.Drawing.Size(126, 85);
+            this.Slot7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot7.TabIndex = 6;
+            this.Slot7.TabStop = false;
+            // 
+            // Slot6
+            // 
+            this.Slot6.Location = new System.Drawing.Point(12, 121);
+            this.Slot6.Name = "Slot6";
+            this.Slot6.Size = new System.Drawing.Size(126, 85);
+            this.Slot6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot6.TabIndex = 5;
+            this.Slot6.TabStop = false;
+            // 
+            // Slot5
+            // 
+            this.Slot5.Location = new System.Drawing.Point(540, 30);
+            this.Slot5.Name = "Slot5";
+            this.Slot5.Size = new System.Drawing.Size(126, 85);
+            this.Slot5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot5.TabIndex = 4;
+            this.Slot5.TabStop = false;
+            // 
+            // Slot4
+            // 
+            this.Slot4.Location = new System.Drawing.Point(408, 30);
+            this.Slot4.Name = "Slot4";
+            this.Slot4.Size = new System.Drawing.Size(126, 85);
+            this.Slot4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot4.TabIndex = 3;
+            this.Slot4.TabStop = false;
+            // 
+            // Slot3
+            // 
+            this.Slot3.Location = new System.Drawing.Point(276, 30);
+            this.Slot3.Name = "Slot3";
+            this.Slot3.Size = new System.Drawing.Size(126, 85);
+            this.Slot3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot3.TabIndex = 2;
+            this.Slot3.TabStop = false;
+            // 
+            // Slot2
+            // 
+            this.Slot2.Location = new System.Drawing.Point(144, 30);
+            this.Slot2.Name = "Slot2";
+            this.Slot2.Size = new System.Drawing.Size(126, 85);
+            this.Slot2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot2.TabIndex = 1;
+            this.Slot2.TabStop = false;
+            // 
+            // Slot1
+            // 
+            this.Slot1.Location = new System.Drawing.Point(12, 30);
+            this.Slot1.Name = "Slot1";
+            this.Slot1.Size = new System.Drawing.Size(126, 85);
+            this.Slot1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Slot1.TabIndex = 0;
+            this.Slot1.TabStop = false;
+            // 
             // SlotMachineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProektnaVPCasino.Properties.Resources.bg2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 537);
             this.Controls.Add(this.musicBtn);
             this.Controls.Add(this.WinTB);
@@ -337,25 +345,26 @@
             this.Controls.Add(this.Slot3);
             this.Controls.Add(this.Slot2);
             this.Controls.Add(this.Slot1);
+            this.DoubleBuffered = true;
             this.Name = "SlotMachineForm";
             this.Text = "Слот Машина";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Slot15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Slot1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -214,5 +214,10 @@ namespace ProektnaVPCasino
 
 
         }
+
+        private void NoBTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
